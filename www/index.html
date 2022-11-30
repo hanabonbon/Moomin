@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/cssua.min.js"></script>
+    <script>
+        function showDetail(filename, trainname , moji) {
+            $("#title").text(trainname);
+            $("#train-image").attr("src", "images/"+filename+".jpg");
+            var medaka = document.getElementById("aiueo");
+            aiueo.innerHTML = moji;
+            $.mobile.changePage('#detail-page');
+             
+            
+            
+        }
+        
+        function goToFlickrPage() {
+            var url = "https://search.rakuten.co.jp/search/mall/%E3%83%A1%E3%83%80%E3%82%AB+%E9%80%81%E6%96%99%E7%84%A1%E6%96%99/";
+            window.open(url, '_blank');
+            
+        }
+
+
+        function goToFlickrPage2() {
+            var url = "https://search.rakuten.co.jp/search/mall/%E9%87%91%E9%AD%9A/";
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <div data-role="page" id="tokaido-page">
+        <div data-role="header" data-position="fixed" class="jqm-header-custom" data-theme="c">
+            <h1>観賞魚カタログ</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li data-role="list-divider">メダカ</li>
+                <li><a href="#" onclick="showDetail('hime', 'ヒメダカ', 'ヒメダカは飼育と繁殖が簡単で、初心者にもおすすめす。メダカには200種類を超える多くの品種改良がいますが、すべてこのヒメダカが元になっています。')">ヒメダカ</a></li>
+                <li><a href="#" onclick="showDetail('hikarimedaka', '光メダカ', '背中の光がしっかりと光っていて他のメダカに比べ大変目立つ、初心者にも楽しめるメダカです。 通常はスイレン鉢などで上から観賞するのに適しています。 横から見た幹之の特徴はヒレの端が青白く光り輝く姿です。 ヒレの観賞をするには側面からも観賞できる水槽飼育がお勧めです。')">光メダカ</a></li>
+                <li><a href="#" onclick="showDetail('aomedaka', '青メダカ', '青メダカは、ホームセンターなどでも手に入る非常に広く普及したメダカの品種で、初心者にもおすすです。ヒメダカ、黒メダカ、白メダカ等と並ぶ改良メダカの基本品種です。')">青メダカ</a></li>
+                <li><a href="#" onclick="showDetail('kuromedaka', '黒メダカ', '野生種のメダカです。 地域により色や形に違いがありますが、野生種のメダカの総称として黒メダカと呼びます。 近年絶滅が危惧されている種類ですが、養殖されたものはペットショップで容易に手に入ります。 楊貴妃や幹之のように美しいメダカに比べると地味ですが、根強い人気のメダカです。')">黒メダカ</a></li>
+                <li><a href="#" onclick="showDetail('siromedaka', '白メダカ','日本メダカの突然変異を元に作出された改良品種で、黒色素胞（メラノフォア）がなく黄色素胞（キサントフォア）も発達していない白いメダカです。 昨今の色とりどりな改良日本メダカと違い、野生のメダカやヒメダカの姿を色以外そのままに残したシンプルなメダカです。比較的安価なため初心者にもおすすめです。')">白メダカ</a></li>
+                <li><a href="#" onclick="showDetail('himedaka', '楊貴妃メダカ', '楊貴妃メダカは、2004年に改良メダカ専門店「めだかの館」にて作出された、朱赤体色が特徴的なメダカの品種です。現在のメダカブームの火付け役となった品種であるだけでなく、観賞魚としてのメダカという魚にとてつもない大きな衝撃をあたえた品種とも言えるでしょう。現在でも、改良メダカの中で人気・知名度ともに抜群の高さを誇る品種です。この品種の誕生がなければ、その後の朱赤が入った品種の誕生は無かったと言われています。')">楊貴妃メダカ</a></li>
+                <li><a href="#" onclick="showDetail('sukeruton', 'スケルトン', 'ウロコが透明で体が透けているように見える不思議なメダカです。白メダカと似ていますが、体色はよりピンク色がかっています。また、目の周りが黒いところが他の品種と大きく異なり、そのため目がかなり大きく見えます。内蔵のあたりが黒っぽく見えるのもスケルトンメダカの特徴です。')">スケルトン</a></li>
+                <li><a href="#" onclick="showDetail('panda', 'パンダスケルトン', '普通のメダカでは白目の部分が、このメダカでは黒くなっていて、パンダのようなかわいらしい姿をしています。')">パンダスケルトン</a></li>
+                <li><a href="#" onclick="showDetail('daruma', 'ダルマメダカ', 'ダルマメダカは、一般的なメダカとは少し違う体型をしたメダカです。その体型は、体が全体的に縮んでいて腹部の膨らみ具合が目立つ、丸みを帯びたものです。その寸詰まりで達磨のような見た目が「ダルマメダカ」という名前の由来となっています。また、「縮みメダカ」の名前で呼ばれることもあります。丸くて可愛らしい体型から、特に女性人気が高いメダカです。ダルマメダカの最大の特徴は、普通体型のメダカより脊椎骨の数が少なかったり、脊椎骨同士が癒合していたりすることで、これがダルマメダカ特有の縮んだ体型の原因となっています。ダルマメダカは縮んだ体型の影響で普通体型のメダカよりも内臓への負担が大きいと言われており、転覆病などの病気にも罹りやすく、長生きさせるのがやや難しい品種でもあります。')">ダルマメダカ</a></li>
+                <li><a href="#" onclick="showDetail('ginga', '銀河メダカ', '２００５年に大場氏が作出。パールブルー（薄い青）体色でヒレが黄色になる２色のメダカです。この青体色でヒレが黄色になる２色のことを「シルバー体色」と言呼びます。銀河はシルバーヒカリメダカのニックネームです。質の良い銀河はうっとりするほど美しく、ぜひとも飼育してほしいメダカです。')">銀河メダカ</a></li>
+                <li><a href="#" onclick="showDetail('arubino', 'アルビノメダカ', '遺伝的に色素が欠乏していることにより、体が白く透けて見え、赤っぽい目をしているのが特徴です。自然界では他の生き物でも稀に生まれてきますが、アルビノは劣性遺伝であり体色が目立つこともあり、自然淘汰されてしまいます。美しい白や赤い目の色が特徴で大変綺麗なメダカですが 体が弱い、視力が良くないため、繁殖が少し難しい、餌を食べるのが遅いなど飼育に気を使う面もあります。')">アルビノメダカ</a></li>
+                <li><a href="#" onclick="showDetail('miyuki', 'ミユキメダカ', '光を当てると背中が光る幹之系メダカの代表です。光る面の大きさや位置などから、様々な亜種が存在しますが、白または青の体色のものをミユキと呼びます。白いものより青いものが好まれるようです。飼育はやや難しく、繁殖も容易ではありません。光が強いもの、光る面積が広いものほど繁殖が難しく、市場に流通する量も少なくなるため、値がはるようになります。')">ミユキメダカ</a></li>
+                <li><a href="#" onclick="showDetail('tentyan', '東天光メダカ', 'ヒカリ系メダカのうち、楊貴妃のようなオレンジ色の体色のものを東天光と呼びます。背中が光るため、頭とヒレだけが紅いように見えます。普通のメダカは背ビレと尻ビレは形が異なり、尾びれは三角です。尾びれがひし形になることで、泳ぐと尾びれがひらひらと美しく揺れます。')">東天光メダカ</a></li>
+                <li><a href="#" onclick="showDetail('toumei', '透明鱗メダカ', 'エラが透明で、血管が赤く見えるメダカです。楊貴妃にちかいですが、血管が模様になっている様子がとても綺麗です。形は普通のメダカと同じです。透明鱗にも白いものやオレンジのものがあります。エラがすけて見えますが、完全に透明というわけではありません。オレンジのものや朱と白の２色、朱と白と黒の３色のものなどがおり、３色のものが錦鯉のようで、特に美しいと思います。')">透明鱗メダカ</a></li>
+                <li><a href="#" onclick="showDetail('burakku', 'ピュアブラック', 'クロメダカよりももっと黒い、真っ黒のメダカです。その姿はとても美しく、また力強く感じます。様々な種類のメダカを混泳させた時、ひときわ存在感を感じるのがこのピュアブラックメダカです。ペットショップではほとんど見ることが出来ませんので、ネットでの購入が確実です。')">ピュアブラック</a></li>
+                <li><a href="#" onclick="showDetail('sansyokumedaka', '三色メダカ', '赤、黒、白の三色のメダカです。錦鯉や金魚のように美しく、日本人好みの和柄で大人気になりました。個体により柄が異なり、特に美しいものが好まれます。三色メダカにも透明鱗やラメ、幹之といった品種があり、どれもとても美しいメダカです。')">三色メダカ</a></li>
+               
+            </ul>
+            <p id="credit">販売サイト <a href="#" onclick="goToFlickrPage();">楽天市場</a></p>
+        </div>
+    
+        <div data-role="footer" data-position="fixed"> 
+            <div data-role="navbar" class="tabbar">
+                <ul>
+                    <li><a href="#tokaido-page" class="ui-btn-active ui-state-persist" data-icon="custom" id="train">メダカ</a></li>
+                    <li><a href="#tohoku-page" data-icon="custom" id="train">金魚</a></li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    
+    <div data-role="page" id="tohoku-page">
+        <div data-role="header" data-position="fixed" data-theme="c">
+            <h1>観賞魚カタログ</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li data-role="list-divider">金魚</li>
+                <li><a href="#" onclick="showDetail('wakin', 'ワキン', 'ワキンは金魚の中でも最も一般的な種類で、金魚すくいの金魚として知られています。体は丈夫で初心者でも簡単に飼育を楽しむことができます。')">ワキン</a></li>
+                <li><a href="#" onclick="showDetail('pinpon', 'ピンポンパール', 'ピンポンパールはコロコロとした玉のような身体が愛らしい金魚です。寸胴体型に愛着をもつ私たち日本人にとっては馴染み深く、非常に人気が高い金魚の種類となっています。成長しても和金のように大きくならずに小型水槽で終生飼育できることからも人気があります。')">ピンポンパール</a></li>
+                <li><a href="#" onclick="showDetail('ryuukin', 'リュウキン', '和金の中から突然変異でうまれた、ヒレの長い個体を固定したものです。日本では和金と共に親しまれ、人気もあり有名なシルエットの金魚です。その名前の由来は江戸時代、この金魚が日本に入ってくる際、中国から琉球を経由して薩摩（鹿児島）に持ち込まれていたことに由来して琉金と名付けられました。琉金はフナの原型を強く感じさせる和金に対して丸いからだに小さな頭、高い体高といった特徴があります。ヒレがとても大きく、三尾や四尾の尾びれはとても優雅で水中でゆらゆら揺れるヒレはとても美しいものです。')">リュウキン</a></li>
+                <li><a href="#" onclick="showDetail('deme', 'デメキン', '琉金の体型に突出した左右の目が特徴的です。目が突出している分、琉金よりも少し泳ぎが苦手な傾向があります。目が突出しているため、どうしても目が傷つきやすく、飾り物や他の品種との混泳などに注意が必要です。')">デメキン</a></li>
+                <li><a href="#" onclick="showDetail('oranda', 'オランダガシラ', 'オランダガシラは頭部に肉瘤（にくりゅう）と呼ばれるコブコブがあるのが特徴の金魚です。肉瘤によりリーゼントやアフロにも見えたりして、顔に愛嬌があります。金魚の中では大きくなるタイプで30cmほどに大きく育つ金魚です。大きさ・体型・頭部といい、かなりボリュームがある金魚と言えます。')">オランダガシラ</a></li>
+                <li><a href="#" onclick="showDetail('azumanisiki', 'アズマニシキ', '日本で品種改良された種類で、昭和の初期に三色出目金とオランダガシラを交配させて作られた金魚です。横浜で作られたので関東という意味から、「東」が名前に入れられています。ショップや通信販売で販売されているものは稚魚が多くサイズも小さいですが、一般的な水槽では成長すると15cmほどですが、大きな水槽で飼育していると30cmにもなることがある比較的大型の金魚です。成長速度に驚くこともあります。')">アズマニシキ</a></li>
+                <li><a href="#" onclick="showDetail('rantyu', 'ランチュウ', 'ランチュウは、よく金魚の王様と言われるほど人気と伝統のある金魚の品種です。らんちゅうの見た目の特徴は背びれがなく、ずんぐりとした体型をしていてヒレも大きく広がるようなことはありません。尾鰭は3つ尾または4つ尾、サクラ尾が標準とされて、頭には肉瘤が発達してきます。')">ランチュウ</a></li>
+                <li><a href="#" onclick="showDetail('kyariko', 'キャリコ琉金', 'キャリコ琉金は、三色出目金（キャリコデメキン）と琉金を交配させて琉金の体形で体の色が三色（キャリコ）のキャリコ琉金が生まれました。昔から、キャリコ琉金を琉金を抜いた「キャリコ」という呼称で呼ばれることもあります。しかし、近年は体色がキャリコである種類に対して「キャリコ〜」という風に呼ぶことが増えてきました。例えば、キャリコ水泡眼・キャリコ頂天眼のような感じです。本サイトでは、キャリコと表記してしまうと他の種類と混乱する可能性があるのでキャリコ琉金と表記しています。')">キャリコ琉金</a></li>
+                <li><a href="#" onclick="showDetail('tetu', 'テツギョ', 'ギンブナを祖先とし突然変異で生まれた種類です。鉄錆色をしていることからその名が付いているが赤、白、青などの体色を持つ個体もおりフナ型の体型で各ヒレが長く尾ビレが突出して長いのが特徴。丈夫で飼育は容易ですが、最大で30㎝にもなるので最終的には60cm以上の水槽での飼育が望ましいです。')">テツギョ</a></li>
+                <li><a href="#" onclick="showDetail('san', '三色デメキン', '三色出目金は錦鯉のように白色、黒色、赤色の3色の体色を持っており、黒出目金と同様に赤出目金の突然変異から作出されました。3色がまだら模様になっています。')">三色デメキン</a></li>
+                <li><a href="#" onclick="showDetail('sarasawa', '更紗和金', '名前となっている更紗は、体色が赤と白2色のまだら模様になっている金魚のことを指します。また、尾が3～4つに分かれているもの（開き尾）は、観賞性が高く華やかなことから人気があります。丈夫なため初心者の方にもおすすめの飼育しやすい金魚です。')">更紗和金</a></li>
+                <li><a href="#" onclick="showDetail('tyoutengan', '頂点眼', '中国で作出された眼が上向きにつく特徴的な品種です。赤出目金の突然変異と言われ、背ビレが無く、個性的な容姿を持ちます。あまり活発に泳ぐ品種ではないため混泳魚に注意が必要です。')">頂点眼</a></li>
+                <li><a href="#" onclick="showDetail('kometto', 'コメット', 'コメットはアメリカで生み出された品種と言われています。リュウキンと和金を交配して作り出された品種で、長い尾ひれが特徴です。活動的で身体も丈夫、と和金の良いところを受け継いでいます。活動量が和金よりも多いので、大きめの水槽で飼育するのが望ましいとされています。')">コメット</a></li>
+                <li><a href="#" onclick="showDetail('syubun', '朱文金', '三色出目金、フナ尾和金、ヒブナの自然交配によって誕生した品種です。和金のような体型から、長い尾ビレ『吹き流し尾』を持っています。身体も丈夫で飼育しやすいです。赤、黒、白を基調とし、中には藍色が混ざった個体もあります。それぞれの個体により、異なるさまざまな模様が出るのも特徴です。')">朱文金</a></li>
+            </ul>
+            <p id="credit">販売サイト <a href="#" onclick="goToFlickrPage2();">楽天市場</a></p>
+        </div>
+        
+        <div data-role="footer" data-position="fixed"> 
+            <div data-role="navbar" class="tabbar">
+                <ul>
+                    <li><a href="#tokaido-page" data-icon="custom" id="train">メダカ</a></li>
+                    <li><a href="#tohoku-page" class="ui-btn-active ui-state-persist" data-icon="custom" id="train">金魚</a></li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    
+    <div data-role="page" id="detail-page">
+        <div data-role="header" data-position="fixed" data-theme="c">
+            <h1 id="title"></h1> 
+            <a href="index.html" data-icon="back" data-rel="back" class="ui-btn-left">戻る</a>
+        </div>
+        
+        <div data-role="content">
+            <img src="" alt="" id="train-image">
+            <p id="aiueo">あいうえお</p>
+        </div>
+    </div>
+</body>
+</html>
